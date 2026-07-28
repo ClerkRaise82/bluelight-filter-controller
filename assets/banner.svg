@@ -1,0 +1,92 @@
+<svg viewBox="0 0 1200 360" width="1200" height="360" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1330"/>
+      <stop offset="55%" stop-color="#141b3d"/>
+      <stop offset="100%" stop-color="#2a1a2e"/>
+    </linearGradient>
+    <radialGradient id="glowBlue" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#5ec6ff" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#5ec6ff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowAmber" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffb347" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#ffb347" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="orb" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#4fc3ff"/>
+      <stop offset="48%" stop-color="#7ea8ff"/>
+      <stop offset="52%" stop-color="#ffb84d"/>
+      <stop offset="100%" stop-color="#ff8a3d"/>
+    </linearGradient>
+    <linearGradient id="screenGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3fa9f5"/>
+      <stop offset="100%" stop-color="#ffb347"/>
+    </linearGradient>
+    <linearGradient id="headTxt" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#eaf4ff"/>
+      <stop offset="100%" stop-color="#ffd9a8"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="0" y="0" width="1200" height="360" fill="url(#bg)"/>
+
+  <circle cx="920" cy="120" r="220" fill="url(#glowBlue)"/>
+  <circle cx="980" cy="250" r="220" fill="url(#glowAmber)"/>
+
+  <!-- soft grid backdrop -->
+  <g stroke="#3a4a7a" stroke-width="1" opacity="0.18">
+    <line x1="0" y1="60" x2="1200" y2="60"/>
+    <line x1="0" y1="120" x2="1200" y2="120"/>
+    <line x1="0" y1="300" x2="1200" y2="300"/>
+    <line x1="0" y1="340" x2="1200" y2="340"/>
+  </g>
+
+  <!-- monitor / screen shape on right -->
+  <g transform="translate(870,60)">
+    <rect x="0" y="0" width="230" height="150" rx="14" fill="#0c1330" stroke="#5c6fae" stroke-width="2" opacity="0.9"/>
+    <rect x="10" y="10" width="210" height="130" rx="8" fill="url(#screenGrad)" opacity="0.85"/>
+    <rect x="90" y="150" width="50" height="18" fill="#2b3560"/>
+    <rect x="60" y="168" width="110" height="10" rx="4" fill="#2b3560"/>
+
+    <!-- filtered light rays crossing screen -->
+    <path d="M10 40 L220 20" stroke="#ffe9c7" stroke-width="3" opacity="0.5"/>
+    <path d="M10 75 L220 60" stroke="#ffdca8" stroke-width="3" opacity="0.4"/>
+    <path d="M10 110 L220 100" stroke="#ffcf8f" stroke-width="3" opacity="0.35"/>
+  </g>
+
+  <!-- day/night toggle orb -->
+  <g transform="translate(645,190)">
+    <circle cx="0" cy="0" r="58" fill="url(#orb)" opacity="0.95"/>
+    <circle cx="0" cy="0" r="58" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.25"/>
+    <!-- moon craters on blue side -->
+    <circle cx="-22" cy="-14" r="6" fill="#dbeeff" opacity="0.4"/>
+    <circle cx="-30" cy="8" r="4" fill="#dbeeff" opacity="0.35"/>
+    <!-- sun rays on amber side -->
+    <g stroke="#ffe0b0" stroke-width="3" opacity="0.7">
+      <line x1="34" y1="-46" x2="46" y2="-60"/>
+      <line x1="52" y1="-4" x2="70" y2="-4"/>
+      <line x1="34" y1="46" x2="46" y2="60"/>
+    </g>
+    <!-- toggle switch bar -->
+    <rect x="-70" y="70" width="140" height="26" rx="13" fill="#0c1330" stroke="#5c6fae" stroke-width="2"/>
+    <circle cx="30" cy="83" r="16" fill="#ffb347"/>
+  </g>
+
+  <!-- eye motif protected -->
+  <g transform="translate(760,270)" opacity="0.85">
+    <path d="M-40 0 Q0 -30 40 0 Q0 30 -40 0 Z" fill="none" stroke="#a9c4ff" stroke-width="2.5"/>
+    <circle cx="0" cy="0" r="9" fill="#ffb347"/>
+  </g>
+
+  <!-- headline -->
+  <text x="60" y="150" font-family="'Segoe UI', Arial, sans-serif" font-size="80" font-weight="700" fill="url(#headTxt)" textLength="760" lengthAdjust="spacingAndGlyphs">BlueLight Filter</text>
+
+  <!-- tagline -->
+  <text x="60" y="200" font-family="'Segoe UI', Arial, sans-serif" font-size="26" fill="#c9d6ff" opacity="0.9" textLength="620" lengthAdjust="spacingAndGlyphs">Screen tint, night mode, eye strain — one toggle</text>
+
+  <!-- decorative subtitle glyphs -->
+  <g stroke="#6f7fc9" stroke-width="2" opacity="0.4">
+    <line x1="60" y1="230" x2="420" y2="230"/>
+  </g>
+</svg>
